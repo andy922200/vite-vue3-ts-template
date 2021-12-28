@@ -1,15 +1,32 @@
-<script setup lang="ts">
+<script lang="ts">
 import {
-    ref 
+    ref, defineComponent
 } from 'vue'
 
-defineProps<{ msg: string }>()
+export default defineComponent({
+    name: 'HelloWorld',
+    props: {
+        msg: {
+            type: String,
+            required: true
+        }
+    },
+    setup(){
+        const count = ref(0)
 
-const count = ref(0)
+        return {
+            count
+        }
+    }
+})
 </script>
 
 <template>
     <h1>{{ msg }}</h1>
+    <h2>T<span>EST</span></h2>
+    <div class="example">
+        DIV-EXAMPLE
+    </div>
 
     <p>
         Recommended IDE setup:
@@ -35,7 +52,7 @@ const count = ref(0)
     </p>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 a {
   color: #42b983;
 }
@@ -45,10 +62,24 @@ label {
   font-weight: bold;
 }
 
+h2{
+    span{
+        color: blue;
+        font-weight: 800; 
+    }
+}
+
 code {
   background-color: #eee;
   padding: 2px 4px;
   border-radius: 4px;
   color: #304455;
+}
+
+.example{
+    display: grid;
+    transition: all .5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
 }
 </style>
