@@ -1,19 +1,35 @@
 import {
-    createStore
-} from 'vuex'
-import dayjs from 'dayjs'
-
+    InjectionKey 
+} from 'vue'
 import {
-    RootState
-} from './declarations/index'
+    createStore, useStore as baseUseStore, Store 
+} from 'vuex'
+import demoModule from './modules/demo'
 
-const state: RootState = {
+// define your own rootState
+import dayjs from 'dayjs'
+const rootState = {
     today: dayjs(),
     selectedLanguage: 'zh-tw'
 }
 
-const store = createStore({
-    state,
+// get the type of rootState 
+export const IRootState = () => (rootState)
+export type RootState = ReturnType<typeof IRootState>
+
+// get correct moduleStates and combined with rootState
+const modules = {
+    demo: demoModule
+}
+type StoreState<T> = T extends { state: infer S } ? S : T
+type ModuleStates<T> = {
+    [key in keyof T]: StoreState<T[key]>
+}
+export type State = ModuleStates<typeof modules & RootState>;
+export const key: InjectionKey<Store<State>> = Symbol()
+
+export const store = createStore<RootState>({
+    state: rootState,
     getters: {
         today: state => state.today,
         selectedLanguage: state => state.selectedLanguage
@@ -34,10 +50,9 @@ const store = createStore({
             }
         }
     },
-    modules: {
-        // demoModule
-    }
+    modules
 })
 
-
-export default store
+export function useStore() {
+    return baseUseStore(key)
+}

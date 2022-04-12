@@ -4,36 +4,42 @@ import {
 
 import {
     RootState
-} from '../declarations/index'
+} from '../index'
 
-import {
-    DemoModule
-} from '../declarations/demo'
-
-const state: DemoModule.State = {
-    user: undefined
+const demoState = {
+    user: {
+        name: {
+            fullName: 'MyFullName',
+            nickname: 'MyNickName'
+        },
+        email: 'test@example.com',
+        id: 1
+    }
 }
 
-const getters: GetterTree<DemoModule.State, RootState> = {
-    user: (state: DemoModule.State) => state.user
+export const demoStateInterface = () => (demoState)
+export type DemoState = ReturnType<typeof demoStateInterface>
+
+const getters: GetterTree<DemoState, RootState> = {
+    user: (state: DemoState) => state.user
 }
 
-const mutations: MutationTree<DemoModule.State> = {
-    setUser(state: DemoModule.State, payload: DemoModule.User) {
+const mutations: MutationTree<DemoState> = {
+    setUser(state: DemoState, payload: DemoState['user']) {
         state.user = payload
     }
 }
 
-const actions: ActionTree<DemoModule.State, RootState> = {
+const actions: ActionTree<DemoState, RootState> = {
 
 }
 
-const data = {
+const demoModule = {
     namespaced: true,
-    state,
+    state: demoState,
     getters,
     actions,
     mutations
 }
 
-export default data
+export default demoModule
