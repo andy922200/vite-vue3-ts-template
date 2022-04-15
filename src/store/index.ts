@@ -6,11 +6,20 @@ import {
 } from 'vuex'
 import demoModule from './modules/demo'
 
+// vue-i18n start
+import {
+    Locales
+} from '../../plugins/i18n/config/locales'
+import {
+    defaultLocale
+} from '../../plugins/i18n/config'
+// vue-i18n end
+
 // define your own rootState
 import dayjs from 'dayjs'
 const rootState = {
     today: dayjs(),
-    selectedLanguage: 'zh-tw'
+    selectedLanguage: defaultLocale
 }
 
 // get the type of rootState 
@@ -38,13 +47,13 @@ export const store = createStore<RootState>({
         setToday(state, time: string) {
             state.today = dayjs(time)
         },
-        setLanguage(state, payload: string) {
+        setLanguage(state, payload: Locales) {
             state.selectedLanguage = payload
         }
     },
     actions: {
-        selectNewDefaultLanguage({ getters, commit }, lang: string) {
-            const { selectedLanguage }: { selectedLanguage: string } = getters
+        selectNewDefaultLanguage({ getters, commit }, lang: Locales) {
+            const { selectedLanguage }: { selectedLanguage: Locales } = getters
             if (lang !== selectedLanguage) {
                 commit('setLanguage', lang)
             }
