@@ -54,31 +54,31 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 a {
-  color: #42b983;
+    color: #42b983;
 }
 
 label {
-  margin: 0 0.5em;
-  font-weight: bold;
+    margin: 0 0.5em;
+    font-weight: bold;
 }
 
-h2{
-    span{
+h2 {
+    span {
         color: blue;
-        font-weight: 800; 
+        font-weight: 800;
     }
 }
 
 code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: #304455;
 }
 
-.example{
+.example {
     display: grid;
-    transition: all .5s;
+    transition: all 0.5s;
     user-select: none;
     background: linear-gradient(to bottom, white, black);
 }

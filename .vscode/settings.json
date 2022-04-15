@@ -17,9 +17,16 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
+  "stylelint.snippet": [
+    "css",
+    "scss",
+    "postcss",
+    "vue"
+  ],
   "stylelint.validate": [
     "css",
     "scss",
+    "postcss",
     "vue"
   ]
 }
