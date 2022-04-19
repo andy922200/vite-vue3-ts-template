@@ -15,8 +15,8 @@ export default defineComponent({
         const route = useRoute()
         const path = computed(()=>route.path)
         const store = useStore()
-        const selectedLanguage = store.state.selectedLanguage
-        const userEmail = store.state.demo.user.email
+        const selectedLanguage = computed(()=>store.state.selectedLanguage)
+        const userEmail = computed(()=>store.state.demo.user.email)
 
         return {
             path,

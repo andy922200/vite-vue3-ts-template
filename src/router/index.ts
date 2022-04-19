@@ -5,7 +5,7 @@ import {
 const routes = [
     {
         path: '/',
-        name: 'home',
+        name: 'index',
         component: () => import('../views/Dev.vue')
     },
     {
