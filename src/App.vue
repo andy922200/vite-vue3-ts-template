@@ -25,7 +25,7 @@ export default defineComponent({
         const route = useRoute()
         const store = useStore()
         const { locale } = useI18n()
-        const routeName = computed(()=>route.name)
+        const routeName = computed(()=>route.name?.valueOf().toString())
 
         return {
             selectedLanguageModel: computed({
