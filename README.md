@@ -24,6 +24,9 @@
 - [ESLint](https://eslint.org/) - Find and fix problems in your JavaScript code
 - [Stylelint](https://stylelint.io/) - A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
+- [Vue Test Utils](https://test-utils.vuejs.org/guide/) - Vue Test Utils is the official unit testing utility library for Vue.js.
+- [Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+- [Testing Library](https://testing-library.com/) - Simple and complete testing utilities that encourage good testing practices
 
 ## Prerequisites
 <p>請先安裝好 Node.js 環境</p>
@@ -68,6 +71,11 @@ $ npm run check-css
 **6. Fix the css coding style automatically**
 ```
 $ npm run format-css
+```
+
+**7. Execute Unit Testing**
+```
+$ npm run test-jest
 ```
 
 ## Author
