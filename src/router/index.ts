@@ -16,7 +16,7 @@ const routes = [
 ]
 
 const baseURL = import.meta.env.VITE_BASE_URL 
-    ? (typeof import.meta.env.VITE_BASE_URL === 'boolean' ? undefined : import.meta.env.VITE_BASE_URL)
+    ? (typeof import.meta.env.VITE_BASE_URL === 'string' ? undefined : import.meta.env.VITE_BASE_URL)
     : undefined
 
 const Router = createRouter({

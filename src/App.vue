@@ -6,6 +6,9 @@ import {
     useI18n
 } from 'vue-i18n'
 import {
+    useRoute
+} from 'vue-router'
+import {
     useStore
 } from './store'
 import {
@@ -19,8 +22,10 @@ export default defineComponent({
         HelloWorld
     },
     setup (){
+        const route = useRoute()
         const store = useStore()
         const { locale } = useI18n()
+        const routeName = computed(()=>route.name)
 
         return {
             selectedLanguageModel: computed({
@@ -32,7 +37,8 @@ export default defineComponent({
                     store.dispatch('selectNewDefaultLanguage', value)
                 }
             }),
-            LayoutLanguages
+            LayoutLanguages,
+            routeName
         }
     }
 })
@@ -51,7 +57,7 @@ export default defineComponent({
     <router-link :to="{name:'index'}">To Home</router-link>
     <br>
     <router-link :to="{name:'test'}">To Test</router-link>
-    <p>{{$t('index.title')}}</p>
+    <p v-if="routeName">{{$t(`${routeName}.title`)}}</p>
     <!-- render route here -->
     <router-view></router-view>
 </template>
