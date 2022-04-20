@@ -78,5 +78,9 @@ $ npm run format-css
 $ npm run test-jest
 ```
 
+**8. Execute E2E Testing**
+```
+$ npm run test-e2e
+```
 ## Author
 - [Andy Lien](https://github.com/andy922200)

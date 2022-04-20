@@ -9,7 +9,8 @@
     "format-css": "npx stylelint \"src/**/*.{scss,css,vue}\" --fix",
     "lint-check": "npx eslint src --ext .js,.ts,tsx",
     "lint-fix": "npx eslint src --ext .js,.ts,tsx --fix",
-    "test-jest": "npx jest src"
+    "test-jest": "npx jest src",
+    "test-e2e": "testcafe chrome ./**/*.e2e.test.ts --app \"npm run dev\" --app-init-delay 100 -S -s screenshots"
   },
   "dependencies": {
     "axios": "^0.26.1",
@@ -47,6 +48,7 @@
     "stylelint": "^14.0.0",
     "stylelint-config-recommended-vue": "^1.0.0",
     "stylelint-config-standard-scss": "^2.0.1",
+    "testcafe": "^1.18.6",
     "ts-jest": "^27.1.4",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4",
