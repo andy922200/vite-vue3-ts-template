@@ -13,7 +13,7 @@ import {
 } from './store'
 import {
     LayoutLanguages
-} from '../plugins/i18n/config/locales'
+} from './plugins/i18n/config/locales'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({

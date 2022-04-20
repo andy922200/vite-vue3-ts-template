@@ -6,7 +6,7 @@ import router from './router'
 import {
     store, key 
 } from './store'
-import VueI18n from '../plugins/i18n/entry'
+import VueI18n from './plugins/i18n/entry'
 
 const app = createApp(App)
 app.use(VueI18n)
