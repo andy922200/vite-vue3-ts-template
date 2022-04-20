@@ -27,6 +27,7 @@
 - [Vue Test Utils](https://test-utils.vuejs.org/guide/) - Vue Test Utils is the official unit testing utility library for Vue.js.
 - [Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
 - [Testing Library](https://testing-library.com/) - Simple and complete testing utilities that encourage good testing practices
+- [TestCafe](https://testcafe.io/) - A node.js tool to automate end-to-end web testing
 
 ## Prerequisites
 <p>請先安裝好 Node.js 環境</p>
