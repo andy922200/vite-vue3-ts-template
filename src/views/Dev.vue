@@ -6,17 +6,25 @@ import {
     useRoute
 } from 'vue-router'
 import {
-    useStore
-} from '../store'
+    storeToRefs 
+} from 'pinia'
+import {
+    useMainStore 
+} from '../store/modules/main'
+import {
+    useDemoStore 
+} from '../store/modules/demo'
 
 export default defineComponent({
     name: 'DevPage',
     setup(){
         const route = useRoute()
         const path = computed(()=>route.path)
-        const store = useStore()
-        const selectedLanguage = computed(()=>store.state.selectedLanguage)
-        const userEmail = computed(()=>store.state.demo.user.email)
+        const mainStore = useMainStore()
+        const demoStore = useDemoStore()
+        const { selectedLanguage } = storeToRefs(mainStore)
+        const { user } = storeToRefs(demoStore)
+        const userEmail = user.value.email
 
         return {
             path,
@@ -30,6 +38,6 @@ export default defineComponent({
 <template>
     <h1>Dev Page</h1>
     <h2 id="path">Path: {{path}}</h2>
-    <h3>This is value 'selectedLanguage: {{selectedLanguage}}' in vuex-root.</h3>
-    <h3>This is value 'userEmail: {{userEmail}}' in vuex-demo-module.</h3>
+    <h3>This is value 'selectedLanguage: {{selectedLanguage}}'.</h3>
+    <h3>This is value 'userEmail: {{userEmail}}'.</h3>
 </template>

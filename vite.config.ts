@@ -14,8 +14,23 @@ export default defineConfig({
         })
     ],
     resolve: {
-        alias: {
-            '@': path.join(__dirname, './src')
+        alias:
+        [
+            {
+                find: 'vue-i18n',
+                replacement: 'vue-i18n/dist/vue-i18n.cjs.js',
+            },
+            {
+                find: '@',
+                replacement: path.join(__dirname, './src')
+            }
+        ]
+    },
+    build: {
+        rollupOptions: {
+            external: [
+                path.resolve(__dirname, './src/**/*.**.test.ts')
+            ]
         }
     }
 })

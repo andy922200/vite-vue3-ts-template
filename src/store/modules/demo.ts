@@ -1,10 +1,6 @@
 import {
-    GetterTree, ActionTree, MutationTree
-} from 'vuex'
-
-import {
-    RootState
-} from '../index'
+    defineStore 
+} from 'pinia'
 
 const demoState = {
     user: {
@@ -17,29 +13,14 @@ const demoState = {
     }
 }
 
-export const demoStateInterface = () => (demoState)
-export type DemoState = ReturnType<typeof demoStateInterface>
+export const IDemoState = () => (demoState)
+export type DemoState = ReturnType<typeof IDemoState>
 
-const getters: GetterTree<DemoState, RootState> = {
-    user: (state: DemoState) => state.user
-}
-
-const mutations: MutationTree<DemoState> = {
-    setUser(state: DemoState, payload: DemoState['user']) {
-        state.user = payload
+export const useDemoStore = defineStore('demo', {
+    state: () => (demoState),
+    actions: {
+        setUser(payload: DemoState['user']) {
+            this.user = payload
+        }
     }
-}
-
-const actions: ActionTree<DemoState, RootState> = {
-
-}
-
-const demoModule = {
-    namespaced: true,
-    state: demoState,
-    getters,
-    actions,
-    mutations
-}
-
-export default demoModule
+})

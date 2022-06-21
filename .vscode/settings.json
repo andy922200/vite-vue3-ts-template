@@ -28,5 +28,8 @@
     "scss",
     "postcss",
     "vue"
+  ],
+  "cSpell.words": [
+    "pinia"
   ]
 }

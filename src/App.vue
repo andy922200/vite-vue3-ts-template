@@ -9,10 +9,10 @@ import {
     useRoute
 } from 'vue-router'
 import {
-    useStore
-} from './store'
+    useMainStore 
+} from './store/modules/main'
 import {
-    LayoutLanguages
+    LayoutLanguages, Locales
 } from './plugins/i18n/config/locales'
 import HelloWorld from './components/HelloWorld.vue'
 
@@ -23,18 +23,18 @@ export default defineComponent({
     },
     setup (){
         const route = useRoute()
-        const store = useStore()
+        const mainStore = useMainStore()
         const { locale } = useI18n()
         const routeName = computed(()=>route.name?.valueOf().toString())
 
         return {
             selectedLanguageModel: computed({
                 get () {
-                    return store.state.selectedLanguage
+                    return mainStore.selectedLanguage
                 },
-                set (value: string){
+                set (value: Locales){
                     locale.value = value
-                    store.dispatch('selectNewDefaultLanguage', value)
+                    mainStore.setLanguage(value)
                 }
             }),
             LayoutLanguages,

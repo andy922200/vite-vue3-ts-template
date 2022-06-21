@@ -9,16 +9,16 @@
     "format-css": "npx stylelint \"src/**/*.{scss,css,vue}\" --fix",
     "lint-check": "npx eslint src --ext .js,.ts,tsx",
     "lint-fix": "npx eslint src --ext .js,.ts,tsx --fix",
-    "test-jest": "npx jest src",
-    "test-e2e": "testcafe chrome ./**/*.e2e.test.ts --app \"npm run dev\" --app-init-delay 100 -S -s screenshots"
+    "test-jest": "npx jest src \"src/test/jest/*.test.ts\"",
+    "test-e2e": "testcafe chrome \"src/test/e2e/*.e2e.test.ts\" --app \"npm run dev\" --app-init-delay 100 -S -s screenshots"
   },
   "dependencies": {
     "axios": "^0.26.1",
     "dayjs": "^1.10.7",
+    "pinia": "^2.0.14",
     "vue": "^3.2.25",
     "vue-i18n": "^9.1.9",
-    "vue-router": "^4.0.12",
-    "vuex": "^4.0.2"
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
