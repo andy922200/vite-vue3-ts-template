@@ -1,6 +1,13 @@
 import {
-    createPinia 
-} from 'pinia'
-const pinia = createPinia()
+    useDemoStore 
+} from './modules/demo'
+import {
+    useMainStore 
+} from './modules/main'
 
-export default pinia
+const useStore = () => ({
+    demo: useDemoStore(),
+    main: useMainStore()
+})
+
+export default useStore

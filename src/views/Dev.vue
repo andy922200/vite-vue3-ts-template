@@ -8,22 +8,16 @@ import {
 import {
     storeToRefs 
 } from 'pinia'
-import {
-    useMainStore 
-} from '../store/modules/main'
-import {
-    useDemoStore 
-} from '../store/modules/demo'
+import useStore from '../store/index'
 
 export default defineComponent({
     name: 'DevPage',
     setup(){
         const route = useRoute()
         const path = computed(()=>route.path)
-        const mainStore = useMainStore()
-        const demoStore = useDemoStore()
-        const { selectedLanguage } = storeToRefs(mainStore)
-        const { user } = storeToRefs(demoStore)
+        const { main, demo } = useStore()
+        const { selectedLanguage } = storeToRefs(main)
+        const { user } = storeToRefs(demo)
         const userEmail = user.value.email
 
         return {
