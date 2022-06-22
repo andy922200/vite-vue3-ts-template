@@ -11,5 +11,8 @@ module.exports = {
     transform: {
         '^.+\\.ts$': 'ts-jest',
         '^.+\\.vue$': '@vue/vue3-jest'
-    }
+    },
+    roots: [
+        './src/tests/jest/'
+    ]
 }

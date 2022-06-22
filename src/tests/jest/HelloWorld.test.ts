@@ -1,7 +1,8 @@
 import {
     render, fireEvent 
 } from '@testing-library/vue'
-import Component from './HelloWorld.vue'
+import Component from '../../components/HelloWorld.vue'
+// @ts-ignore
 import '@testing-library/jest-dom/extend-expect'
 
 test('increments value on click', async () => {
