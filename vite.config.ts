@@ -3,7 +3,13 @@ import {
 } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
-import path from 'path'
+import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
+import {
+    resolve, dirname, join 
+} from 'path'
+import {
+    fileURLToPath
+} from 'url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,25 +17,26 @@ export default defineConfig({
         vue(),
         legacy({
             targets: ['defaults', 'not IE 11']
+        }),
+        VueI18nVitePlugin({
+            include: [
+                resolve(dirname(fileURLToPath(import.meta.url)), './plugins/lang/*.ts')
+            ]
         })
     ],
     resolve: {
         alias:
         [
             {
-                find: 'vue-i18n',
-                replacement: 'vue-i18n/dist/vue-i18n.cjs.js',
-            },
-            {
                 find: '@',
-                replacement: path.join(__dirname, './src')
+                replacement: join(__dirname, './src')
             }
         ]
     },
     build: {
         rollupOptions: {
             external: [
-                path.resolve(__dirname, './src/**/*.**.test.ts')
+                resolve(__dirname, './src/**/*.**.test.ts')
             ]
         }
     }

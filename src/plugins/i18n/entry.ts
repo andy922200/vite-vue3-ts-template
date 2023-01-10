@@ -7,6 +7,8 @@ import {
 } from './config/index'
 
 const i18n = createI18n({
+    legacy: false,
+    globalInjection: true,
     messages,
     locale: defaultLocale,
     fallbackLocale: defaultLocale
