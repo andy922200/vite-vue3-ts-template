@@ -32,14 +32,14 @@
 ## Prerequisites
 <p>請先安裝好 Node.js 環境</p>
 
-- [npm](https://www.npmjs.com/get-npm)
+- [yarn](https://yarnpkg.com/)
 - [Node.js](https://nodejs.org/en/download/)
 
-This Demo project is running on Node.js (14.18.2), NPM (6.14.15) while testing.
+This Demo project is running on Node.js (16.17.0), NPM (8.15.0) while testing.
 
 ## Clone / Download
 1. Clone this repository to your local machine
-2. Start your development :)
+2. Start your development
 
 ```
 $ git clone https://github.com/andy922200/vite-vue3-ts-template.git
@@ -52,36 +52,36 @@ $ git clone https://github.com/andy922200/vite-vue3-ts-template.git
 > Open a new terminal window and enter the folder
 $ cd <project folder>
 ```
-**2. Install packages via npm**
+**2. Install packages via yarn**
 ```
-$ npm install
+$ yarn install
 ```
 **3. Compiles the webpack for development**
 ```
-$ npm run dev // port:8080
+$ yarn run dev // port:8080
 ```
 **4. Fix the coding style automatically ( js / html )**
 ```
-$ npm run lint-fix
+$ yarn run lint-fix
 ```
 **5. Check the css coding style**
 ```
-$ npm run check-css
+$ yarn run check-css
 ```
 
 **6. Fix the css coding style automatically**
 ```
-$ npm run format-css
+$ yarn run format-css
 ```
 
 **7. Execute Unit Testing**
 ```
-$ npm run test-jest
+$ yarn run test-jest
 ```
 
 **8. Execute E2E Testing**
 ```
-$ npm run test-e2e
+$ yarn run test-e2e
 ```
 ## Author
 - [Andy Lien](https://github.com/andy922200)
