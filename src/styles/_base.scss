@@ -1,28 +1,28 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    overflow-y: auto !important;
-    min-height: 100vh;
+  overflow-y: auto !important;
+  min-height: 100vh;
 }
 
 body {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 ul {
-    padding-left: 0;
+  padding-left: 0;
 
-    li {
-        list-style: none;
-    }
+  li {
+    list-style: none;
+  }
 }
 
 a,
 a:hover,
 a::before {
-    text-decoration: none;
+  text-decoration: none;
 }

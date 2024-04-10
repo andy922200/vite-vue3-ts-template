@@ -23,6 +23,16 @@ dayjs.extend(isSameOrAfter)
 
 export default dayjs
 
-export const changeToLocaleTime = function ({ time, lang, timezoneOffset, format }: { time: string, lang: string, timezoneOffset: number, format: string }): string {
-    return dayjs(time).add(timezoneOffset, 'minute').locale(`${lang}`).format(`${format}`)
+export const changeToLocaleTime = function ({
+  time,
+  lang,
+  timezoneOffset,
+  format,
+}: {
+  time: string
+  lang: string
+  timezoneOffset: number
+  format: string
+}): string {
+  return dayjs(time).add(timezoneOffset, 'minute').locale(`${lang}`).format(`${format}`)
 }

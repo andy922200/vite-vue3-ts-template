@@ -2,19 +2,19 @@
 @import "base";
 
 #app {
-    min-height: 100vh;
-    font-family: $font-family;
-    text-align: center;
+  min-height: 100vh;
+  font-family: $font-family;
+  text-align: center;
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  a {
     color: #2c3e50;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-weight: bold;
+  }
 
-    a {
-        color: #2c3e50;
-        font-weight: bold;
-    }
-
-    .router-link-active {
-        color: #42b983;
-    }
+  .router-link-active {
+    color: #42b983;
+  }
 }
