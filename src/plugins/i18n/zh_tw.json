@@ -1,8 +1,8 @@
 {
-    "index": {
-        "title": "這是首頁"
-    },
-    "test": {
-        "title": "這是關於頁"
-    }
+  "index": {
+    "title": "這是首頁"
+  },
+  "test": {
+    "title": "這是關於頁"
+  }
 }

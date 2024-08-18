@@ -1,8 +1,8 @@
 {
-    "index": {
-        "title": "这是首页"
-    },
-    "test": {
-        "title": "这是关于页"
-    }
+  "index": {
+    "title": "这是首页"
+  },
+  "test": {
+    "title": "这是关于页"
+  }
 }

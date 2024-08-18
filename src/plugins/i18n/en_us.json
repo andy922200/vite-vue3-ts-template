@@ -1,8 +1,8 @@
 {
-    "index": {
-        "title": "This is index page."
-    },
-    "test": {
-        "title": "This is about page."
-    }
+  "index": {
+    "title": "This is index page."
+  },
+  "test": {
+    "title": "This is about page."
+  }
 }

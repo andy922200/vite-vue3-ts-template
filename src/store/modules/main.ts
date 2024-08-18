@@ -1,9 +1,9 @@
-import { defineStore } from 'pinia'
 import dayjs from 'dayjs'
+import { defineStore } from 'pinia'
 
 // vue-i18n start
-import { Locales } from '../../plugins/i18n/config/locales'
 import { defaultLocale } from '../../plugins/i18n/config'
+import { Locales } from '../../plugins/i18n/config/locales'
 // vue-i18n end
 
 const mainState = {

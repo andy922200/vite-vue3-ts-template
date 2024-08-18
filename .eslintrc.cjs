@@ -8,9 +8,13 @@ module.exports = {
   extends: [
     'eslint-config-prettier',
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
     'plugin:vue/vue3-essential',
+    '@vue/eslint-config-typescript',
+    'plugin:import/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
     'plugin:prettier/recommended',
   ],
   parserOptions: {
@@ -18,11 +22,26 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
-  plugins: ['vue', '@typescript-eslint'],
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [['@', './src']],
+        extensions: ['.js', '.ts', '.vue'],
+      },
+    },
+  },
   rules: {
     'eslint-disable-next-line': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'vue/multi-word-component-names': 'off',
+    'import/no-unresolved': [2, { ignore: ['^@/'] }],
+    'import/order': [
+      'error',
+      {
+        groups: [['builtin', 'external'], 'internal', 'parent', 'sibling', 'index'],
+        alphabetize: { order: 'asc', caseInsensitive: true },
+      },
+    ],
   },
 }

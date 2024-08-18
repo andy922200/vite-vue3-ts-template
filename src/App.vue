@@ -2,9 +2,9 @@
 import { defineComponent, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
-import { useMainStore } from './store/modules/main'
-import { LayoutLanguages, Locales } from './plugins/i18n/config/locales'
 import HelloWorld from './components/HelloWorld.vue'
+import { LayoutLanguages, Locales } from './plugins/i18n/config/locales'
+import { useMainStore } from './store/modules/main'
 
 export default defineComponent({
   name: 'App',

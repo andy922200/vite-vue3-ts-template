@@ -1,7 +1,7 @@
 <script lang="ts">
+import { storeToRefs } from 'pinia'
 import { computed, defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
-import { storeToRefs } from 'pinia'
 import useStore from '../store/index'
 
 export default defineComponent({

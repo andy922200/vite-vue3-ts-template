@@ -25,7 +25,7 @@
 - [Stylelint](https://stylelint.io/) - A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
 - [Vue Test Utils](https://test-utils.vuejs.org/guide/) - Vue Test Utils is the official unit testing utility library for Vue.js.
-- [Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+- [Vitest](https://vitest.dev/) - A Vite-native testing framework. It's fast!
 - [Testing Library](https://testing-library.com/) - Simple and complete testing utilities that encourage good testing practices
 - [TestCafe](https://testcafe.io/) - A node.js tool to automate end-to-end web testing
 
@@ -76,7 +76,7 @@ $ yarn run format-css
 
 **7. Execute Unit Testing**
 ```
-$ yarn run test-jest
+$ yarn run test-vitest
 ```
 
 **8. Execute E2E Testing**
