@@ -1,7 +1,7 @@
 import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
 import legacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue'
-import { resolve, dirname, join } from 'path'
+import { dirname, join, resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { defineConfig } from 'vitest/config'
 

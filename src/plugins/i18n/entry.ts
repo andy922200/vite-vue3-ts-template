@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n'
 
-import { messages, defaultLocale } from './config/index'
+import { defaultLocale, messages } from './config/index'
 
 const i18n = createI18n({
   legacy: false,

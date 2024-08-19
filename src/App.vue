@@ -1,7 +1,8 @@
 <script lang="ts">
-import { defineComponent, computed } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
+
 import HelloWorld from './components/HelloWorld.vue'
 import { LayoutLanguages, Locales } from './plugins/i18n/config/locales'
 import { useMainStore } from './store/modules/main'

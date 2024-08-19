@@ -2,6 +2,7 @@
 import { storeToRefs } from 'pinia'
 import { computed, defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
+
 import useStore from '../store/index'
 
 export default defineComponent({
