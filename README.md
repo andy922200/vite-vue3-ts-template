@@ -52,36 +52,31 @@ $ git clone https://github.com/andy922200/vite-vue3-ts-template.git
 > Open a new terminal window and enter the folder
 $ cd <project folder>
 ```
-**2. Install packages via yarn**
+**2. Install packages via pnpm**
 ```
-$ yarn install
+$ pnpm install
 ```
 **3. Compiles the webpack for development**
 ```
-$ yarn run dev // port:8080
+$ pnpm dev // port:8080
 ```
 **4. Fix the coding style automatically ( js / html )**
 ```
-$ yarn run lint-fix
+$ pnpm lint-fix
 ```
-**5. Check the css coding style**
+**5. Fix the css coding style automatically**
 ```
-$ yarn run check-css
-```
-
-**6. Fix the css coding style automatically**
-```
-$ yarn run format-css
+$ pnpm format-css
 ```
 
-**7. Execute Unit Testing**
+**6. Execute Unit Testing**
 ```
-$ yarn run test-vitest
+$ pnpm test-vitest
 ```
 
-**8. Execute E2E Testing**
+**7. Execute E2E Testing**
 ```
-$ yarn run test-e2e
+$ pnpm test-e2e
 ```
 ## Author
 - [Andy Lien](https://github.com/andy922200)
