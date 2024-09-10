@@ -24,6 +24,7 @@
 - [ESLint](https://eslint.org/) - Find and fix problems in your JavaScript code
 - [Stylelint](https://stylelint.io/) - A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
+- [TailwindCSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML
 - [Vue Test Utils](https://test-utils.vuejs.org/guide/) - Vue Test Utils is the official unit testing utility library for Vue.js.
 - [Vitest](https://vitest.dev/) - A Vite-native testing framework. It's fast!
 - [Testing Library](https://testing-library.com/) - Simple and complete testing utilities that encourage good testing practices

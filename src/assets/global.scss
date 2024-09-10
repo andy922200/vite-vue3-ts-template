@@ -1,0 +1,14 @@
+#app {
+  height: 100dvh;
+  color: #333333;
+  font-family: "微軟正黑體", "黑體-繁", Helvetica, sans-serif, monospace;
+  
+  a {
+    color: #2c3e50;
+    font-weight: bold;
+  }
+
+  .router-link-active {
+    color: #42b983;
+  }
+}

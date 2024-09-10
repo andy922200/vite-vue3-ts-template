@@ -1,3 +1,6 @@
+import '@/assets/base.css'
+import '@/assets/global.scss'
+
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 

@@ -1,32 +1,25 @@
-<script lang="ts">
+<script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { computed, defineComponent } from 'vue'
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 import useStore from '../store/index'
 
-export default defineComponent({
-  name: 'DevPage',
-  setup() {
-    const route = useRoute()
-    const path = computed(() => route.path)
-    const { main, demo } = useStore()
-    const { selectedLanguage } = storeToRefs(main)
-    const { user } = storeToRefs(demo)
-    const userEmail = user.value.email
-
-    return {
-      path,
-      selectedLanguage,
-      userEmail,
-    }
-  },
-})
+const route = useRoute()
+const path = computed(() => route.path)
+const { main, demo } = useStore()
+const { selectedLanguage } = storeToRefs(main)
+const { user } = storeToRefs(demo)
+const userEmail = user.value.email
 </script>
 
 <template>
-  <h1>Dev Page</h1>
-  <h2 id="path">Path: {{ path }}</h2>
-  <h3>This is value 'selectedLanguage: {{ selectedLanguage }}'.</h3>
-  <h3>This is value 'userEmail: {{ userEmail }}'.</h3>
+  <div class="dev flex flex-wrap justify-center">
+    <h1 class="my-1 w-full text-center">Dev Page</h1>
+    <h2 class="my-1 w-full text-center">Path: {{ path }}</h2>
+    <h3 class="my-1 w-full text-center">
+      This is value 'selectedLanguage: {{ selectedLanguage }}'.
+    </h3>
+    <h3 class="my-1 w-full text-center">This is value 'userEmail: {{ userEmail }}'.</h3>
+  </div>
 </template>

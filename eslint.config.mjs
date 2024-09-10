@@ -2,6 +2,7 @@
 import eslint from '@eslint/js'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import eslintPluginSimpleImportSort from 'eslint-plugin-simple-import-sort'
+import eslintPluginTailwindcss from 'eslint-plugin-tailwindcss'
 import eslintPluginVue from 'eslint-plugin-vue'
 import globals from 'globals'
 import tsEslint from 'typescript-eslint'
@@ -27,6 +28,7 @@ const eslintConfig = tsEslint.config(
   eslint.configs.recommended,
   ...tsEslint.configs.recommended,
   ...eslintPluginVue.configs['flat/recommended'],
+  ...eslintPluginTailwindcss.configs['flat/recommended'],
   eslintPluginPrettierRecommended,
 
   {

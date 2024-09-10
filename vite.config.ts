@@ -13,6 +13,7 @@ export default defineConfig({
       targets: ['defaults', 'not IE 11'],
     }),
     VueI18nVitePlugin({
+      runtimeOnly: false,
       include: [resolve(dirname(fileURLToPath(import.meta.url)), './plugins/lang/*.ts')],
     }),
   ],

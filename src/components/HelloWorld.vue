@@ -1,54 +1,31 @@
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
+<script setup lang="ts">
+import { ref } from 'vue'
 
-export default defineComponent({
-  name: 'HelloWorld',
-  props: {
-    msg: {
-      type: String,
-      required: true,
-    },
-  },
-  setup() {
-    const count = ref(0)
-
-    return {
-      count,
-    }
+const props = defineProps({
+  msg: {
+    type: String,
+    required: true,
   },
 })
+
+const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-  <h2>T<span>EST</span></h2>
-  <div class="example">DIV-EXAMPLE</div>
+  <div class="flex flex-wrap justify-center">
+    <h1 class="my-2 w-full text-center">{{ props.msg }}</h1>
+    <h2 class="my-2 w-full text-center">T<span>EST</span></h2>
+    <div class="example my-2 w-full text-center">DIV-EXAMPLE</div>
 
-  <p>See <code>README.md</code> for more information.</p>
+    <p class="w-full text-center">See <code>README.md</code> for more information.</p>
 
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank"> Vite Docs </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+    <button type="button" class="my-2 rounded bg-blue-200 p-2" @click="count++">
+      count is: {{ count }}
+    </button>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-a {
-  color: #42b983;
-}
-
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
-}
-
 h2 {
   span {
     color: blue;

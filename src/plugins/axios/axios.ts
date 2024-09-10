@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
+import axios, { AxiosResponse, InternalAxiosRequestConfig } from 'axios'
 
 const service = axios.create({
   baseURL: `${import.meta.env.VITE_APP_BASE_DOMAIN}${import.meta.env.VITE_APP_BASE_API}`,
@@ -10,7 +10,7 @@ const service = axios.create({
 
 // request interceptor
 service.interceptors.request.use(
-  (config: AxiosRequestConfig) => {
+  (config: InternalAxiosRequestConfig<any>) => {
     if (!config.headers) {
       throw new Error("Expected 'config' and 'config.headers' not to be undefined")
     }
