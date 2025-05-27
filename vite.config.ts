@@ -1,7 +1,7 @@
 import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
 import legacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue'
-import { dirname, join, resolve } from 'path'
+import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { defineConfig } from 'vitest/config'
 
@@ -18,12 +18,9 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    alias: [
-      {
-        find: '@',
-        replacement: join(__dirname, './src'),
-      },
-    ],
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
   },
   server: {
     open: true,

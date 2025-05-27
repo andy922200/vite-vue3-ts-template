@@ -1,3 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* 將 dark: 的行為從預設基於 prefers-color-scheme (系統偏好設定) 
+改為基於 .dark 父層類別的存在來運作。這樣可以讓開發者更靈活地控制深色模式，
+例如透過 JavaScript 動態切換 .dark 類別來啟用或停用深色模式。 */
+@custom-variant dark (&:where(.dark, .dark *));

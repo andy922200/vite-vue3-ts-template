@@ -1,5 +1,4 @@
 # Vue 3 + Typescript + Vite
-
 <p align="center">
     <img src="./iconForReadme.png" alt="logo" width="128" height="128">
 </p>
@@ -59,7 +58,7 @@ $ pnpm install
 ```
 **3. Compiles the webpack for development**
 ```
-$ pnpm dev // port:8080
+$ pnpm dev
 ```
 **4. Fix the coding style automatically ( js / html )**
 ```

@@ -1,6 +1,6 @@
 import { Selector } from 'testcafe'
 
-fixture('Dev.vue').page('http://localhost:3000/#/test')
+fixture('Dev.vue').page('http://localhost:8888/#/test')
 
 test('Dev.vue contains Path', async (testController) => {
   const selector = Selector('#path')

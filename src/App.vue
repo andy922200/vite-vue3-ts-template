@@ -5,7 +5,7 @@ import { useRoute } from 'vue-router'
 
 import HelloWorld from './components/HelloWorld.vue'
 import { LayoutLanguages, Locales } from './plugins/i18n/config/locales'
-import { useMainStore } from './store/modules/main'
+import { useMainStore } from './store/main'
 
 const route = useRoute()
 const mainStore = useMainStore()

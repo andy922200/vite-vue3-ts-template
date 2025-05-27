@@ -1,10 +1,8 @@
 import dayjs from 'dayjs'
 import { defineStore } from 'pinia'
 
-// vue-i18n start
-import { defaultLocale } from '../../plugins/i18n/config'
-import { Locales } from '../../plugins/i18n/config/locales'
-// vue-i18n end
+import { defaultLocale } from '../plugins/i18n/config'
+import { Locales } from '../plugins/i18n/config/locales'
 
 const mainState = {
   today: dayjs(),
