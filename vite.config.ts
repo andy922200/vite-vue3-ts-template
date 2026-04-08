@@ -26,7 +26,7 @@ export default defineConfig({
     open: true,
   },
   build: {
-    rollupOptions: {
+    rolldownOptions: {
       external: [resolve(__dirname, './src/**/*.**.test.ts')],
     },
   },
@@ -35,7 +35,6 @@ export default defineConfig({
     environment: 'jsdom',
     include: ['./src/tests/vitest/**/*.(spec|test).ts'],
     coverage: {
-      all: false,
       enabled: true,
       reporter: ['text', 'json', 'html'],
     },
